@@ -8,5 +8,7 @@
   
   <li>run</li>
   <li>./a</li>
+  <li>educational video:</li>
+  <li>https://aparat.com/v/5yYqN</li>
   </ul>
   
