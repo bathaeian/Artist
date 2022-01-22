@@ -1,7 +1,11 @@
 # Artist
 a small example for learning gtkmm
 what you need: mingw + gtkmm
-compile:
-g++ -std=c++11 Artist.cpp $(pkg-config gtkmm-3.0 --cflags --libs | sed 's/ -I/ -isystem /g')
-run
-./a
+<ul>
+  <li>compile:</li>
+<li>g++ -std=c++11 Artist.cpp $(pkg-config gtkmm-3.0 --cflags --libs | sed 's/ -I/ -isystem /g')</li>
+  
+  <li>run</li>
+  <li>./a</li>
+  </ul>
+  
