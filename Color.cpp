@@ -3,12 +3,12 @@
 
 class Color: public Tools
 {
-private:
-    enum colors { RED = 1, BLUE, WHITE, GREEN, BLACK, YELLOW};
-    colors col;
 public:
+    enum colors { RED = 1,GREEN, BLUE, BLACK};
     Color(colors);
     std::string getProperty();
+    private:
+    colors col;
 };
 
 Color::Color(colors c=RED)
@@ -17,5 +17,12 @@ Color::Color(colors c=RED)
 }
 
 std::string Color::getProperty(){
-    return "color "+col;
+    std::string s("");
+    switch(col){
+        case 1: {s=s+"red";break;}
+        case 2: {s=s+"green";break;}
+        case 3: {s=s+"blue";break;}
+        case 4: {s=s+"black";break;}
+    }
+    return s;
 }
