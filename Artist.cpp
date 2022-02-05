@@ -5,13 +5,19 @@ using namespace std;
 
 int main(int argc, char** argv)
 {
-        vector<Tools*> tt(10);
-        Brush b;
+        vector<Tools*> tt;
+        Brush *b;
+        Color *c;
         for(int i=1;i<=5;i++){
-                b=Brush(i);
-                tt.push_back(&b);
+                b=new Brush(i);
+                cout<<"in main"<<b->getProperty()<<"\n";
+                tt.push_back(b);
         }
-
+        for(int i=1;i<=4;i++){
+                c=new Color(static_cast<Color::colors>(i));
+                cout<<"in main"<<c->getProperty()<<"\n";
+                tt.push_back(c);
+        }
         auto app = Gtk::Application::create(argc, argv);
         
         ArtistW window=ArtistW(tt);
