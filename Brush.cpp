@@ -14,5 +14,6 @@ Brush::Brush(int s=1)
     brush_size=s;
 }
 std::string Brush::getProperty(){
-    return "brush "+brush_size;
+    std::string s("brush "+std::to_string(brush_size));
+    return s;
 }
